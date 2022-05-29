@@ -1,0 +1,83 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url("/public/img/");
+  min-height: 0;
+}
+
+.acolor{
+  color:black;
+  margin: 10px 16px 0 16px;
+  text-decoration: none;
+}
+.acolor:hover{
+  color: white;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+nav{
+   display: flex;
+   align-items: center;
+   background-color: #2196f3;
+   height: 64px;
+}
+nav > p{
+  font-size: 32px;
+  padding-top: 20px;
+  margin-left:60px;
+  color: white;
+}
+
+thead{
+  line-height:24px;
+    
+    background-color: #2196f3;
+    color: white;
+    font-weight:800;
+    text-align: center;
+}
+th{
+    width: 100px;
+    border-top: #2196f3 solid 1px ;
+    border-left: white solid 1px ;
+    border-right:white solid 1px ;
+    border-bottom:#2196f3 solid 1px ;
+    padding:  0 80px;
+    text-align: center;
+}
+tr,td{
+  width: 100px;
+  padding:  0 80px;
+  text-align: center;
+}
+tr:hover{
+  background-color: rgba(33, 150, 243, 0.2);
+}
+li a{
+  color: #000000;
+  margin: 0 4px;
+  font-size: 18px;
+}
+.titulo_nav{
+  font-size: 22px;
+  padding: 4px;
+}
+.list-box{
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  top: 10px;
+}
+label{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+textarea{
+  height: 36px;
+  resize: none;
+
+}

@@ -1,0 +1,3 @@
+SELECT * FROM pessoa
+INNER JOIN resposta
+ON pessoa.Id= resposta.IdPessoa

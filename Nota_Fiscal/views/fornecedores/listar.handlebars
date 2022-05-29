@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/public/css/menu.css">
+    <link rel="stylesheet" href="/public/css/estilo.css">
+    <script type=" text/javascript" src="/public/js/materialize.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <nav>
+        <a href="#" data-target="slide-out" class="sidenav-trigger left-align">
+            <i class="material-icons">menu</i>
+        </a>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Listar fornecedores</a>
+        </div>
+    </nav>
+   <ul id="slide-out" class="sidenav">
+        {{!-- <li><a href="/dashboard"><i class="material-icons">home</i>Home</a></li>
+        <li>
+            <div class="divider"></div>
+        </li> --}}
+      
+        <li>
+            <a class="subheader" id="icon_blue">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                </svg>
+               <span> Produtos</span>
+            </a>
+        </li>
+        <li>
+            <a href="/produtos/cadastrar" class="waves-effect" id="icon_blue">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                </svg>
+                <span>Cadastrar</span>  
+            </a>
+        </li>
+        <li>
+            <a href="/produtos/listar" class="waves-effect " id="icon_blue" >
+               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list " viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+               <span> Listar</span>
+            </a>
+        </li>
+         <li>
+            <a href="http://10.0.42.229:8081/" target="_blank" class="waves-effect" id="icon_blue">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+                <span> Consultar Produtos</span>
+            </a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <li>
+            <a class="subheader" id="icon_green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                </svg>
+               <span> Serviços</span>
+            </a>
+        </li>
+        <li>
+            <a href="/produtos/cadastrarServicos" class="waves-effect" id="icon_green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                </svg>
+                <span>Cadastrar</span>  
+            </a>
+        </li>
+        <li>
+            <a href="/produtos/listarServicos" class="waves-effect " id="icon_green" >
+               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list " viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+               <span> Listar</span>
+            </a>
+        </li>
+        <li>
+            <a href="http://10.0.42.229:8081/servicos" target="_blank" class="waves-effect" id="icon_green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+                <span> Consultar Serviços</span>
+            </a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <a class="subheader" id="icon_blue">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
+                    <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
+                </svg>
+               <span> Fornecedores</span>
+             </a>
+        </li>
+        <li>
+            <a href="/fornecedores/cadastrar" class="waves-effect" id="icon_blue">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                </svg>
+                <span>Cadastrar</span>
+            </a>
+        </li>
+        <li>
+            <a href="/fornecedores/listar" class="waves-effect" id="icon_blue">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list " viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+               <span> Listar</span>
+            </a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <a class="subheader" id="icon_green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags" viewBox="0 0 16 16">
+                    <path d="M3 2v4.586l7 7L14.586 9l-7-7H3zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2z"/>
+                    <path d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1v5.086z"/>
+                </svg>
+                <span>Secretarias</span>
+            </a>
+        </li>
+        <li>
+            <a href="/categorias/cadastrar" class="waves-effect" id="icon_green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                </svg>
+                <span>Cadastrar</span> 
+            </a>
+        </li>
+        <li>
+            <a href="/categorias/listar" class="waves-effect" id="icon_green">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list " viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                <span> Listar</span>
+            </a>
+        </li>
+
+        <li>
+            <div class="divider"></div>
+        </li>
+
+       
+        {{!-- <li><a class="subheader"><i class="material-icons">attach_money</i>Venda</a></li>
+        <li><a href="/vendas/cadastrar" class="waves-effect"><i class="material-icons">add_shopping_cart</i>Nova
+                venda</a>
+        </li>
+        </li> --}}
+            <div class="divider"></div>
+        </li>
+        <li>
+            <a href="/login" class="waves-effect" id="icon_red">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                </svg>
+                <span>Sair</span>
+            </a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        
+    </ul>
+    <br />
+    <div class="list-box">
+        <div class="row">
+            <div class=" col s12">
+                <div class="row">
+                    <div class="table-responsive">
+                        <table class="responsive-table " id="tabela"/>
+                    </div>
+                    <div id="loading" class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle">
+                                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h6 style="color:red" id="error" />
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type=" text/javascript" src="/public/js/materialize.min.js"></script>
+<script>
+    var token = localStorage.getItem('token');
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, null);
+    });
+
+    getFornecedores()
+
+    async function getFornecedores() {
+        var dados = `
+            <thead>
+                <tr>
+                    {{!-- <th>ID</th> --}}
+                    <th>Razão Social</th>
+                    <th>CNPJ</th>
+                    {{!--  --}}
+                    <th>N° de contrato</th>
+                    <th>vigência</th>
+                    <th>Gestor de contrato</th>
+                    <th>N° de empenho</th>
+                    {{!--  --}}
+                    <th>Editar</th>
+                    <th>Remover</th>
+                </tr>
+            </thead>
+            <tbody>
+        `
+        await axios.get('/api/fornecedores', { headers: { authorization: `Bearer ${token}` } })
+            .then(data => {
+                data.data.forEach(fornecedor => {
+                    dados = dados + `
+                        <tr>
+                            {{!-- <td>${fornecedor._id}</td> --}}
+                            <td>${fornecedor.razaoSocial}</td>
+                            <td>${fornecedor.cnpj}</td>
+
+                            <td>${fornecedor.ncontrato}</td>
+                            <td>${fornecedor.vigencia}</td>
+                            <td>${fornecedor.gestorcontrato}</td>
+                            <td>${fornecedor.empenho}</td>
+                            <td>
+                                <button class="btn waves-effect waves-light"
+                                    onclick="window.location.href='/fornecedores/cadastrar/${fornecedor._id}';">
+                                    <i class="material-icons">edit</i></button>
+                            </td>
+                            <td>
+                                <button class="btn-flat waves-effect waves-light red"
+                                    onclick="removerFornecedor('${fornecedor._id}')">
+                                    <i class="material-icons">delete</i></button>
+                            </td>
+                        </tr>
+                    `
+                })
+                dados = dados + `</tbody>`
+                document.getElementById('tabela').innerHTML = dados
+            })
+            .catch(error => {
+                console.log(error)
+                document.getElementById('error').innerHTML = error.response.data.message
+            })
+        document.getElementById('loading').style.display = "none";
+    }
+
+    document.getElementById('loading').style.display = "none";
+    async function removerFornecedor(id) {
+        document.getElementById('loading').style.display = "block";
+        await axios.delete(`/api/fornecedores/${id}`, { headers: { authorization: `Bearer ${token}` } })
+            .then(data => {
+                location.reload();
+            })
+            .catch(error => {
+                document.getElementById('error').innerHTML = error.response.data.message
+            })
+        document.getElementById('loading').style.display = "none";
+    }
+</script>
+
+</html>

@@ -1,0 +1,130 @@
+/*login */
+#body-login{
+    background-color: #77abe6;
+}
+.login-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-content  img{
+    position: relative;
+    top: 100px;
+}
+.login-content h2{
+    position: relative;
+    top:60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    color: white;
+}
+.login-content  .login{
+    position: relative;
+    top: 80px;
+}
+.login label{
+    font-size: 24px;
+    color: black;
+}
+.container label{
+    font-size: 22px;
+    color: black;
+}
+.login .card{
+  border-radius: 0.5rem;
+  background-color: rgba(248,248,248,1);
+}
+.login form{
+    margin: 20px 0 0 0 ;
+}
+.btn{
+    background-color: #2196f3
+}
+.btn-style{
+    width:60%;
+    background-color: #2196f3 ;
+}
+.btn:hover{
+    background-color: #64b5f6  ;
+}
+/* ------- */
+/* create login */
+.title{
+    display: flex;
+    justify-content: center;
+    font-size: 2.1rem;
+    margin: 0 20px;
+}
+nav{
+    background-color: #2196f3;
+}
+.form label{
+    font-size: 24px;
+    color: black;
+}
+td{
+    line-height:32px;
+    text-align: center;    
+}
+tr:hover{
+    background-color: rgba(33, 150, 243, 0.2);
+}
+th { 
+    line-height:24px;
+    border-top: #2196f3 solid 1px ;
+    border-left: white solid 1px ;
+    border-right:white solid 1px ;
+    border-top:#2196f3 solid 1px ;
+    border-bottom:#2196f3 solid 1px ;
+    background-color: #2196f3;
+    color: white;
+    font-weight:600;
+    text-align: center;
+    padding:  0 16px;
+}
+.list-box{
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*  */
+
+/* Icons */
+.sidenav li  a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.sidenav #icon_blue svg{
+    height: 24px;
+    width: 24px;
+    color: #0388f4;
+}
+.sidenav #icon_green svg{
+    height: 24px;
+    width: 24px;
+    color: #009c00;
+}
+.sidenav #icon_red svg{
+    height: 24px;
+    width: 24px;
+    color: #db0000;
+}
+#icon_red span{
+    color: red;
+}
+#icon_red:hover{
+    font-size: 18px;
+}
+.sidenav li a span{
+    position: relative;
+    left: 24px;
+}
+
+
+
+
+

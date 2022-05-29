@@ -1,0 +1,35 @@
+Nome da empresa*
+CNPJ*
+Responsavel *
+CPF *
+RG*
+Data de Nascimento*
+Dados de contato{
+Telefone fixo*
+Celular
+Email*
+}
+Endereço{
+cep*
+Logradouro*
+cidade*
+estado*
+Nº de endereço*
+complemento(opcional)
+
+}
+Url de site(opcional)
+Whatsapp*{
+Redesocials(opcional)
+}
+arquivos para subir{
+logo tipo da empresa(opcional)
+artes da empresa(opcional)
+}
+Profisão - (campo de seleção - campo de texto) *
+seguimento no mercado - text area para breve resumo *
+
+
+Botão de enviar - value cadastrar 
+
+

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/public/css/menu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <nav>
+        <a href="#" data-target="slide-out" class="sidenav-trigger left-align">
+            <i class="material-icons">menu</i>
+        </a>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Lançar venda</a>
+        </div>
+    </nav>
+    <ul id="slide-out" class="sidenav">
+        {{!-- <li><a href="/dashboard"><i class="material-icons">home</i>Home</a></li>
+        <li>
+            <div class="divider"></div>
+        </li> --}}
+      
+        <li><a class="subheader"><i class="material-icons">shopping_bag</i>Produtos</a></li>
+        <li><a href="/produtos/cadastrar" class="waves-effect"><i class="material-icons">add_box</i>Cadastrar</a></li>
+        <li><a href="/produtos/listar" class="waves-effect"><i class="material-icons">format_list_numbered</i>Listar</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader"><i class="material-icons">business_center</i>Fornecedores</a></li>
+        <li><a href="/fornecedores/cadastrar" class="waves-effect"><i class="material-icons">add_box</i>Cadastrar</a>
+        </li>
+        <li><a href="/fornecedores/listar" class="waves-effect"><i
+                    class="material-icons">format_list_numbered</i>Listar</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader"><i class="material-icons">label</i>Categorias</a></li>
+        <li><a href="/categorias/cadastrar" class="waves-effect"><i class="material-icons">add_box</i>Cadastrar</a></li>
+        <li><a href="/categorias/listar" class="waves-effect"><i
+                    class="material-icons">format_list_numbered</i>Listar</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        {{!-- <li><a class="subheader"><i class="material-icons">attach_money</i>Venda</a></li>
+        <li><a href="/vendas/cadastrar" class="waves-effect"><i class="material-icons">add_shopping_cart</i>Nova
+                venda</a>
+        </li>
+        </li>
+            <div class="divider"></div>
+        </li> --}}
+        <li><a href="/login" class="waves-effect"><i class="material-icons">login</i>Sair</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        
+    </ul>
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="card col s12">
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select onchange="alterarProdutoValor()" required id="produtoId" name="produtoId">
+                                        <option value="" disabled selected>Selecione um produto</option>
+                                        {{#produtos}}
+                                        <option value={{_id}}>{{produto}}</option>
+                                        {{/produtos}}
+                                    </select>
+                                    <label>Produtos</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="Data da venda" id="data" name="data" required type="date"
+                                        class="validate">
+                                    <label for="first_name">Data da venda</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input onchange="alterarQuantidade()" placeholder="Quantidade" id="quantidade"
+                                        name="quantidade" required type="number" class="validate">
+                                    <label for="first_name">Quantidade</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <select required name="situacao" id="situacao">
+                                        <option value="" disabled selected>Selecione o status da venda</option>
+                                        {{#situacoes}}
+                                        <option value={{this}}>{{this}}</option>
+                                        {{/situacoes}}
+                                    </select>
+                                    <label>Situação</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <select required name="aprovacao" id="aprovacao">
+                                        <option value="" disabled selected>Selecione o status da aprovação</option>
+                                        {{#aprovacoes}}
+                                        <option value={{this}}>{{this}}</option>
+                                        {{/aprovacoes}}
+                                    </select>
+                                    <label>Aprovação</label>
+                                </div>
+                            </div>
+                            <div class="row s12">
+                                <div class="row col s6">
+                                    <button class="btn waves-effect waves-light" id="button" type="submit"
+                                        onclick="save()" name="action">Salvar</button>
+                                    <div id="loading" class="preloader-wrapper big active">
+                                        <div class="spinner-layer spinner-blue-only">
+                                            <div class="circle-clipper left">
+                                                <div class="circle"></div>
+                                            </div>
+                                            <div class="gap-patch">
+                                                <div class="circle"></div>
+                                            </div>
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col s3">
+                                    <h5>Total:</h5>
+                                </div>
+                                <div class="row col s3">
+                                    <h5 id="total" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <h6 style="color:green" id="success" />
+                <h6 style="color:red" id="error" />
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type=" text/javascript" src="public/js/materialize.min.js"></script>
+<script>
+    var token = localStorage.getItem('token')
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, null);
+    });
+
+    document.getElementById('loading').style.display = "none";
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems, null);
+    });
+
+    document.getElementById("button").addEventListener("click", function (event) {
+        event.preventDefault()
+    });
+
+    document.getElementById("total").innerHTML = 0.00
+
+    var quantidadeSelecionada = 0.00
+    var produtoSelecionado = 0.00
+
+    function alterarProdutoValor() {
+        produtoSelecionado = document.getElementById("produtoId").value.split("preco")[1];
+        alterarTotal()
+    }
+
+    function alterarQuantidade() {
+        quantidadeSelecionada = document.getElementById("quantidade").value;
+        alterarTotal()
+    }
+
+    function alterarTotal() {
+        document.getElementById("total").innerHTML = (quantidadeSelecionada * produtoSelecionado).toFixed(2);
+    }
+    async function save() {
+        var object = {};
+        new FormData(document.querySelector('form'))
+            .forEach(function (value, key) {
+                object[key] = value;
+            });
+        object.produtoId = object.produtoId.split("preco")[0]
+        document.getElementById('button').style.display = "none";
+        document.getElementById('loading').style.display = "block";
+        await axios.post('/api/vendas', object, { headers: { authorization: `Bearer ${token}` } })
+            .then(data => {
+                console.log(data.data)
+                document.getElementById('error').innerHTML = ''
+                document.getElementById('success').innerHTML = 'Venda realizada com sucesso!'
+            })
+            .catch(error => {
+                document.getElementById('success').innerHTML = ''
+                document.getElementById('error').innerHTML = error.response.data.message
+            })
+        document.getElementById('button').style.display = "block";
+        document.getElementById('loading').style.display = "none";
+    }
+</script>
+
+</html>
